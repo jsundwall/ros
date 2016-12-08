@@ -4,13 +4,7 @@ module.exports = function (app, passport) {
   // HOME PAGE - Login links
   // =======================
   app.get('*', function(req, res) {
-    res.sendfile('index.html'); // load the index file
-  });
-
-  app.get('/login', function(req, res) {
-
-    // render the page and pass any flash messages
-    res.render('login.ejs', { message: req.flash('loginMessage') });
+    res.sendfile('./public/index.html'); // load the index file
   });
 
   // Process the login form

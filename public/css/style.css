@@ -63,16 +63,22 @@
 #menu_login{
 	margin-left:auto;
 	margin-right:auto;
-	width:255px;
-	margin-top:34px;
 	height:182px;
-	max-height:182px;
+	width:255px;
+	margin-top:34px !important;
+	max-height:225px;
 }
-	#menu_login img{
+#menu_register{
+	margin-left:auto;
+	margin-right:auto;
+	width:255px;
+	max-height:225px;
+}
+	#menu_login, #menu_register img{
 		margin-top:10px;
 		cursor:pointer;
 	}
-	#menu_login p{
+	#menu_login p, #menu_register p{
 		font-weight: 700;
 		font-size: 23px;
 		color: darkgreen;
