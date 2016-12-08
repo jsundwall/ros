@@ -1,1 +1,436 @@
-body { padding-top:30px; }
+* {
+	font-family: 'Roboto', sans-serif !important;
+}
+#demo, #demo1, #demo2{
+	width:200px;
+	height:70px;
+	border-radius:5px;
+	border:1px solid gray;
+	cursor:pointer;
+	background: rgb(157,213,58); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(157,213,58,1) 0%, rgba(161,213,79,1) 50%, rgba(128,194,23,1) 51%, rgba(124,188,10,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(157,213,58,1) 0%,rgba(161,213,79,1) 50%,rgba(128,194,23,1) 51%,rgba(124,188,10,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(157,213,58,1) 0%,rgba(161,213,79,1) 50%,rgba(128,194,23,1) 51%,rgba(124,188,10,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9dd53a', endColorstr='#7cbc0a',GradientType=0 ); /* IE6-9 */
+	color:white;
+	font-size:48px;
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+	line-height:70px;
+	margin-top:30px;
+}
+#demo:active, #demo1:active, #demo2:active{
+	color:green;
+	background: rgb(157,213,58); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(124,188,10,1) 0%, rgba(128,194,23,1) 50%, rgba(161,213,79,1) 51%, rgba(157,213,58,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(124,188,10,1) 0%,rgba(128,194,23,1) 50%,rgba(161,213,79,1) 51%,rgba(157,213,58,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(124,188,10,1) 0%,rgba(128,194,23,1) 50%,rgba(161,213,79,1) 51%,rgba(157,213,58,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9dd53a', endColorstr='#7cbc0a',GradientType=0 ); /* IE6-9 */
+}
+#reset{
+	width:200px;
+	height:70px;
+	cursor:pointer;
+	color:darkgreen;
+	font-size:15px;
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+	line-height:70px;
+	margin-top:0px;
+}
+#reset a{
+	color:darkgreen;
+}
+
+/* Login Page*/
+.game-container1{
+	margin-left:auto;
+	margin-right:auto;
+	width:400px;
+	height:711px;
+	background-image:url(../img/junglebackground.png);
+}
+.rostorvlogo{
+	margin-left:auto;
+	margin-right:auto;
+	width:91px;
+	height:91px;
+	padding-top:100px;
+	cursor:pointer;
+}
+#menu_login{
+	margin-left:auto;
+	margin-right:auto;
+	width:255px;
+	margin-top:34px;
+	height:182px;
+	max-height:182px;
+}
+	#menu_login img{
+		margin-top:10px;
+		cursor:pointer;
+	}
+	#menu_login p{
+		font-weight: 700;
+		font-size: 23px;
+		color: darkgreen;
+		margin-top: 6px;
+		text-align: center;
+		cursor:pointer;
+	}
+	#menu_login p:hover{
+	color:white;
+	}
+.bubble{
+	margin-top:8px;
+	z-index:2;
+	position:absolute;
+}
+.monkey{
+	margin-top:58px;
+	z-index:1;
+	position:absolute;
+}
+.gone2, .bubble_gone2, .gone3, .bubble_gone3, .bubble_gone4, .bubble_gone5, .gone4, .bubble_gone6, .gone5, .bubble_gone7, .gone6, .bubble_gone8{
+	display:none;
+}
+.tool{
+	margin-bottom:-11px;
+}
+input{
+	width: 237px;
+	display: inline-block;
+	height: 47px;
+	border-radius: 10px;
+	opacity: 0.5;
+	color: black;
+	text-align: center;
+	font-size: 18px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:5px;
+	margin-left:6px;
+	font-weight:700;
+}
+.signupimg{
+	margin-left:57px;
+}
+.cancel, .cancel1, .cancel2{
+	margin-right:28px;
+	margin-left:8px;
+}
+.ok, .ok1, .ok2{
+	position:absolute;
+	z-index:10;
+}
+.forgotimg{
+	margin-left:-18px;
+}
+.orimg{
+	margin-left:105px;
+	margin-top:0px !important;
+}
+.noclick{
+cursor:default !important;
+}
+.achievementsbg{
+	background-image:url(../img/achievement_bg.png);
+	width:400px;
+	height:589px;
+	margin-top:-225px;
+	position:absolute;
+	margin-left:-73px;
+}
+.scrollable{
+	width:390px;
+	height:527px;
+	margin-left:5px;
+	margin-top:12px;	
+	
+}
+.backarrow{
+	margin-left:13px;
+}
+.achieve_img{
+	margin-top:10px;
+	margin-left:26px;
+}
+.settingsbg{
+	background-image:url(../img/settings.png);
+	width:400px;
+	height:589px;
+	margin-top:-225px;
+	position:absolute;
+	margin-left:-73px;
+}
+.loginnow{
+	margin-left:82px;
+	margin-top:-8px;
+	margin-bottom:18px;
+}
+/* Game ping pong */
+.game-container{
+	margin-left:auto;
+	margin-right:auto;
+	width:400px;
+	height:711px;
+	background-image:url(../img/blockbaground.png);
+}
+.game-container p{
+	color:gold;
+	font-size:24px;
+	float:left;
+	margin-left:10px;
+}
+.monkeyright{
+	float:right;
+	margin-top:5px;
+	margin-right:5px;
+}
+.blocks{
+	margin-right:auto;
+	margin-left:auto;
+	width:342px;
+	margin-left:29px;
+	margin-top:20px;
+}
+.single_box{
+	margin-left:181px;
+	margin-top:-32px;
+}
+.monkeyhead{
+position:absolute;
+margin-left:-36px;
+margin-top:85px;
+}
+.user_block{
+float:right;
+margin-top:402px;
+margin-right:130px;
+}
+.cross{
+	width:33px;
+	float:right;
+	margin-right:-132px;
+	margin-top:21px;
+	display:none;
+}
+/* Game water log */
+.game-container2{
+	margin-left:auto;
+	margin-right:auto;
+	width:400px;
+	height:711px;
+	background-image:url(../img/background_water.png);
+}
+.waterlog1, .waterlog2, .waterlog3, .waterlog4, .waterlog5, .yellowfish, .water_control{
+	position:absolute;
+}
+.water_control{
+margin-top:599px;
+}
+.waterlog1{
+margin-left:10px;
+}
+.waterlog2{
+margin-left:10px;
+margin-top:110px;
+}
+.waterlog3{
+	margin-top:110px;
+	margin-left:265px;
+}
+.waterlog4{
+	margin-top:320px;
+	margin-left:132px;
+}
+.waterlog5{
+	margin-top:510px;
+	margin-left:10px;
+}
+.yellowfish{
+	margin-left:170px;
+	margin-top:506px;
+}
+#score_water{
+	position:absolute;
+    color: brown;
+    font-weight: 700;
+    font-size: 24px;
+    margin-left: 300px;
+    margin-top: 4px;
+}
+/* Game dress game */
+.game-container3{
+	margin-left:auto;
+	margin-right:auto;
+	width:400px;
+	height:711px;
+	background-image:url(../img/background_dress.png);
+	background-size:contain;
+}
+	#clothes_container{
+		width:101px;
+		height:413px;
+		margin-left:6px;
+		padding-top:127px;
+	}		
+		.d_butterfly{
+			width:70%;
+			margin-left:15px;
+		}
+		.d_flower{
+			width:50%;
+			margin-left:25px;
+		}
+		.d_glasses{
+			width:50%;
+			margin-left:25px;
+		}
+		.d_hat{
+			width:80%;
+			margin-left:10px;
+		}
+		.d_snake{
+			width:98%;
+		}
+		.draggable{
+			margin-top:25px;
+		}
+#done_button{
+	margin-top:68px;
+	margin-left:12px;
+	}
+	#done_button img{
+		cursor:pointer;
+	}
+#done_box{
+	width:400px;
+	display:none;
+	height:150px;
+	margin-top:-135px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d2dfed+0,c8d7eb+26,bed0ea+51,a6c0e3+51,afc7e8+62,bad0ef+75,99b5db+88,799bc8+100;Grey+Blue+Gloss+%231 */
+	background: rgb(210,223,237); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(210,223,237,1) 0%, rgba(200,215,235,1) 26%, rgba(190,208,234,1) 51%, rgba(166,192,227,1) 51%, rgba(175,199,232,1) 62%, rgba(186,208,239,1) 75%, rgba(153,181,219,1) 88%, rgba(121,155,200,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(210,223,237,1) 0%,rgba(200,215,235,1) 26%,rgba(190,208,234,1) 51%,rgba(166,192,227,1) 51%,rgba(175,199,232,1) 62%,rgba(186,208,239,1) 75%,rgba(153,181,219,1) 88%,rgba(121,155,200,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(210,223,237,1) 0%,rgba(200,215,235,1) 26%,rgba(190,208,234,1) 51%,rgba(166,192,227,1) 51%,rgba(175,199,232,1) 62%,rgba(186,208,239,1) 75%,rgba(153,181,219,1) 88%,rgba(121,155,200,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2dfed', endColorstr='#799bc8',GradientType=0 ); /* IE6-9 */
+	position:absolute;
+}
+	#done_box h2{
+		color:black;
+		text-align:center;
+		margin:0px;
+	}
+	#done_box h3{
+	text-align:center;
+	margin:0px;
+	color:darkgreen;
+	}
+.button-link {
+    padding: 10px 15px;
+    background: #4479BA;
+    color: #FFF;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: solid 1px #20538D;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+	cursor:pointer;
+	margin-right:10px;
+	margin-left:10px;
+}
+.button-link:hover {
+    background: #356094;
+    border: solid 1px #2A4E77;
+    text-decoration: none;
+}
+.button-link:active {
+    -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    background: #2E5481;
+    border: solid 1px #203E5F;
+}
+	#buttonwrap{
+	width:202px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:44px;
+	}
+/* Game dress game */
+.game-container4{
+	margin-left:auto;
+	margin-right:auto;
+	width:400px;
+	height:711px;
+	background-image:url(../img/flappybackground.png);
+	background-size:contain;
+	overflow:hidden;
+}	
+.spike{
+	margin-left:241px;
+	position:absolute;
+}
+	.spike2{
+		margin-left:522px;
+		position:absolute;	
+	}
+		.spike3{
+			margin-left:836px;
+			position:absolute;
+		}
+.box_spike{
+	position:absolute;
+	margin-top:229px;
+	margin-right:30px;
+}
+	.box_spike1{
+		position:absolute;
+		margin-top:229px;
+		margin-left:580px;
+	}
+.box_2_spike{
+	position:absolute;
+	margin-top:383px;
+	margin-left:290px;
+}
+	.box_2_spike1{
+		position:absolute;
+		margin-top:383px;
+		margin-left:880px;	
+	}
+	.fugl{
+		position:absolute;
+		margin-left:50px;
+		}
+	#whitespace{
+		width:39.2%;
+		position:absolute;
+		z-index:2;
+		height:720px;
+		background-color:white;
+	}
+		.whitenumbertwo{
+			margin-top:-711px;
+			margin-left:1152px;
+		}
+/* Easter egg */
+.dealwithit{
+margin-left:148px;
+position:absolute;
+display:none;
+z-index:100;
+}
