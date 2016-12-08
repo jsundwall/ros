@@ -1,32 +1,11 @@
 // All the menu scripts
+$( document ).ready(function() {
 $('.login').click(function(){
 		$(".bubble_gone, .bubble_gone5, .dealwithit").fadeOut(300);
 		$(".bubble_gone8").delay(2000).fadeIn(300);
 		$(".gone").fadeOut(1000);
 		$(".gone6").delay(999).fadeIn(1000);
 		$(".bubble_gone8").delay(2500).fadeOut(300);
-});
-
-$('.achievement_button').click(function(){
-		$(".bubble_gone1").fadeOut(300);
-		$(".bubble_gone6").delay(3000).fadeIn(300);
-		$(".gone1").fadeOut(1000);
-		$(".gone4").delay(999).fadeIn(1000);
-});
-$('.settings').click(function(){
-		$(".bubble_gone1, .bubble_gone5, .dealwithit").fadeOut(300);
-		$(".bubble_gone7").delay(3000).fadeIn(300);
-		$(".gone1").fadeOut(1000);
-		$(".gone5").delay(999).fadeIn(1000);
-});
-$('.bubble_gone6, .bubble_gone7').click(function(){
-		$(".bubble_gone6, .bubble_gone7").fadeOut(300);
-});
-$('.backarrow').click(function(){
-		$(".bubble_gone6, .bubble_gone7").fadeOut(300);
-		$(".bubble_gone1").delay(3000).fadeIn(300);
-		$(".gone4, .gone5").fadeOut(1000);
-		$(".gone1").delay(999).fadeIn(1000);
 });
 $('.register').click(function(){
 		$(".bubble_gone, .bubble_gone5, .dealwithit").fadeOut(300);
@@ -159,3 +138,4 @@ $('#demo2').click(function(){
 		$(".fugl").animate({top:'20px'}, 500);
 		//$(".game-container4").delay(18000).css("background-image", "url(assets/img/flappy_dead.png)");
 	});
+});

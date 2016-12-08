@@ -1,0 +1,10 @@
+{
+	"files": [
+	{
+		"type":"SCRIPT",
+		"source":"public/js/games.js",
+		"size":5.59,
+		"stopExecution":false
+	}
+	]
+}
