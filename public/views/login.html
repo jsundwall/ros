@@ -5,11 +5,15 @@
 	</div>
 	<div id="menu_login">
 
+
 		<!-- Sign in with login information -->
 		<img src="img/loginnow.png" class="loginnow noclick menu_fade">
-		<input type="text" name="nickname" placeholder="NICKNAME" class="menu_fade"></input>
-		<input type="password" name="phone_number" placeholder="PASSWORD" class="menu_fade"></input>
-	
+		<form action="/login" method="post">
+			<input type="text" name="email" placeholder="NICKNAME" class="menu_fade"></input>
+			<input type="password" name="password" placeholder="PASSWORD" class="menu_fade"></input>
+
+			<button type="submit" class="submit-button">Login</button>
+		</form>
 		<a href="/"><img src="img/cancel.png" class="cancel2 menu_fade"></a>
 		<a href="/afterlogin"><img src="img/ok.png" class="ok2 menu_fade"></a>
 	</div>

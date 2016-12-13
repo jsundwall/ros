@@ -9,51 +9,45 @@ module.exports = function (app, passport) {
 
   // Process the login form
   // app.post('login', do all the passport stuff here);
+  app.post('/login', passport.authenticate('local-login', {
+		successRedirect : '/afterlogin', // redirect to the secure profile section
+		failureRedirect : '/login', // redirect back to the signup page if there is an error
+		failureFlash : true // allow flash messages
+	}));
 
   // ======================
   // Signup ===============
   // ======================
-  // Show the signup form
-  app.get('/signup', function(req, res){
-
-    // Render the page and pass any flash messages
-    res.render('signup.ejs', { message: req.flash('signupMessage') });
-  });
 
   // process the signup form
-  app.post('/signup', passport.authenticate('local-signup', {
-    successRedirect : '/profile', // redirect to the secure profile section
-    failureRedirect : '/signup', // redirect back to the signup page if there is an error
+  app.post('/register', passport.authenticate('local-signup', {
+    successRedirect : '/login', // redirect to the secure profile section
+    failureRedirect : '/register', // redirect back to the signup page if there is an error
     failureFlash : true // allow flash messages
   }));
 
-  // ======================
-  // Profile section ======
-  // ======================
-  // we will want this protected so you have to be logged in to visit
-  // we will use route middleware to verify this (the isLoggedIn function)
-  app.get('/profile', isLoggedIn, function(req, res){
-    res.render('profile.ejs', {
-      user : req.user // Pass the user from request to the template
-    });
+
+// -- All routes afte this section requires login. Checked with isLoggedIn middleware
+  app.get('/afterlogin', isLoggedIn, function(req, res){
   });
+
 
   // =====================
   // Logout ==============
   // =====================
   app.get('/logout', function(req, res){
-    req.logout();
+    req.logOut();
     res.redirect('/');
   });
 };
 
-// route middleware to make sure a user is logged in
+// route middleware to make sure
 function isLoggedIn(req, res, next) {
 
-    // if user is authenticated in the session, carry on
-    if (req.isAuthenticated())
-        return next();
+	// if user is authenticated in the session, carry on
+	if (req.isAuthenticated())
+		return next();
 
-    // if they aren't redirect them to the home page
-    res.redirect('/');
+	// if they aren't redirect them to the home page
+	res.redirect('/');
 }

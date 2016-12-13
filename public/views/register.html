@@ -5,18 +5,20 @@
 	</div>
 	<div id="menu_register">
 
-				<!-- Register stuff -->
-				<img src="img/signup.png" class="signupimg noclick menu_fade">
-				<input type="text" name="nickname" placeholder="NICKNAME" class="menu_fade"></input>
-				<input type="text" name="phone_number" placeholder="PHONE NUMBER" class="menu_fade"></input>
-				<input type="password" name="password" placeholder="PASSWORD" class="menu_fade"></input>
-				
+		<!-- Register stuff -->
+		<form action="/register" method="post">
+			<img src="img/signup.png" class="signupimg noclick menu_fade">
+			<input type="text" name="email" placeholder="MAIL" class="menu_fade"></input>
+			<input type="text" name="phone_number" placeholder="PHONE NUMBER" class="menu_fade"></input>
+			<input type="password" name="password" placeholder="PASSWORD" class="menu_fade"></input>
+			<button type="submit" class="submit-button"> Register </button>
+		</form>
 				<a href="/index"><img src="img/cancel.png" class="cancel menu_fade"></a>
-				<a href="/afterlogin"><img src="img/ok.png" class="ok menu_fade"></a>			
-	
+				<a href="/afterlogin"><img src="img/ok.png" class="ok menu_fade"></a>
+
 	</div>
-	
-	<!-- Chat bubble from Monkey boy -->		
+
+	<!-- Chat bubble from Monkey boy -->
 	<img class="bubble bubble_gone15" src="img/signupbubble.png">
 	<img class="monkey" src="img/monkey.png">
 </div>
