@@ -3,13 +3,19 @@
 var mongoose = require('mongoose');
 var bcrypt   = require('bcrypt-nodejs');
 
+/* var acheivementSchema = mongoose.Schema({
+  acheivement1:
+}); */
+
 // define the schema for our user model
 var userSchema = mongoose.Schema({
 
     local            : {
         email        : String,
-        password     : String
-}});
+        password     : String,
+    }
+//    acheivements: [acheivementSchema]
+});
 
 // methods ======================
 // generating a hash
