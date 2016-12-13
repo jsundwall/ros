@@ -1,0 +1,111 @@
+<!-- Body html -->
+<div id="games">
+	<ul class="gameul">
+		<li class="game-icon1"><img src="img/monkeyface.png"> Ping Pong</li>
+		<li class="game-icon2"><img src="img/yellow2.png"> Water Log</li>
+		<li class="game-icon3"><img src="img/abe2.png"> Flappy Monkey</li>
+		<li class="game-icon4"><img src="img/but2.png"> Dress Up</li>
+	</ul>
+</div>
+<div class="game-container5">
+		<div id="map_buttons">
+			<a href="/afterlogin" class="gone1 menu_fade"><img src="img/button_menu.png"></a>
+			<a href="#" class="gone1 achievement_button menu_fade"><img src="img/button_achievement.png"></a>
+		</div>
+		
+		<img src="img/arrow.png" class="arrow">
+					<!-- Achievements -->
+				<div class="achievementsbg gone4" style="margin:0px;">
+					<img src="img/backarrow.png" class="backarrow">
+					<div class="scrollable">
+						<img src="img/achi_1.png" class="achieve_img">
+						<img src="img/achi_2.png" class="achieve_img">
+						<img src="img/achi_3.png" class="achieve_img">
+						<img src="img/achi_4.png" class="achieve_img">
+						<img src="img/achi_5.png" class="achieve_img">
+						<img src="img/achi_6.png" class="achieve_img">
+						<img src="img/achi_7.png" class="achieve_img">
+						<img src="img/achi_8.png" class="achieve_img">
+						<img src="img/achi_9.png" class="achieve_img">
+						<img src="img/achi_10.png" class="achieve_img">
+						<img src="img/achi_11.png" class="achieve_img">
+						<img src="img/achi_12.png" class="achieve_img">
+						<img src="img/achi_13.png" class="achieve_img">
+					</div>
+				</div>
+</div>
+<div class="game1">
+	<p id="p">Score: 0</p>
+	<img class="monkeyright" src="/img/3monkeys.png">
+	<img class="cross" src="/img/redcross.png">
+	<img class="blocks" src="/img/fullblocks.png"> 
+	<img class="single_box" src="/img/box.png">
+	<img class="monkeyhead" src="/img/monkeyhead.png">
+	<img class="user_block" src="/img/block.png">
+</div>
+<div class="game1demo">
+<div id="demo">
+DEMO
+</div>
+<div id="reset">
+<a href="game_one.html">Reset</a>
+</div>
+</div>
+<div class="game2">
+	<p id="score_water">Score: 0</p>
+	<img class="waterlog1" src="/img/game_waterlogavoider.png">
+	<img class="waterlog2" src="/img/game_waterlogavoider.png">
+	<img class="waterlog3" src="/img/game_waterlogavoider.png"> 
+	<img class="waterlog4" src="/img/game_waterlogavoider.png">
+	<img class="yellowfish" src="/img/yellowfish.png">
+	<img class="waterlog5" src="/img/game_waterlogavoider.png">
+	<img class="water_control" src="/img/water_control.png">
+</div>
+<div class="game2demo">
+<div id="demo1">
+DEMO
+</div>
+<div id="reset">
+<a href="game_two.html">Reset</a>
+</div>
+</div>
+
+<div class="game4">
+	<div id="clothes_container">
+		<img class="draggable d_butterfly" src="/img/d_butterfly.png">
+		<img class="draggable d_flower" src="/img/d_flower.png">
+		<img class="draggable d_glasses" src="/img/d_glasses.png">
+		<img class="draggable d_hat" src="/img/d_hat.png">
+		<img class="draggable d_snake" src="/img/d_snake.png">
+	</div>
+	
+	<div id="done_button">
+		<img src="/img/done_button.png">
+	</div>
+	<div id="done_box">
+		<h2>Stage 1 Complete</h2>
+		<h3>Score : 1337</h3>
+		<div id="buttonwrap">
+			<a href="/map"><button class="te button-link">Next</button></a>
+			<a href="/map"><button class="te button-link">End Game</button></a>
+		</div>
+	</div>
+</div>
+
+
+<!-- Custom scrollbar script, keep in document -->
+<script>
+(function($){
+        $(window).on("load",function(){
+            $(".scrollable").mCustomScrollbar();
+        });
+    })(jQuery);
+	
+	$(".scrollable").mCustomScrollbar({
+    theme:"dark"
+});
+</script>
+<!-- This script must be kept in bottom -->
+<script src="js/afterlogin.js"></script>
+<script src="js/games.js"></script>
+<script src="js/map.js"></script>

@@ -11,13 +11,21 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 		// After login
 		.when('/afterlogin', {
 			templateUrl: 'views/afterlogin.html',
-			controller: 'MainController'
+			controller: 'MainController',
 		})
-
+		
+		// map and games
+		.when('/map', {
+			templateUrl: 'views/map.html',
+			controller: 'MainController',
+		})
+		
 		// Login
+		
 		.when('/login', {
 			templateUrl: 'views/login.html',
 			controller: 'MainController'
+
 		})
 
 		// Register
