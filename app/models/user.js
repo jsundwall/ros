@@ -3,18 +3,19 @@
 var mongoose = require('mongoose');
 var bcrypt   = require('bcrypt-nodejs');
 
-/* var acheivementSchema = mongoose.Schema({
-  acheivement1:
-}); */
+// Define Achievements schema for the Achievements model
+var achievementSchema = mongoose.Schema({
+  name: String,
+  value: Boolean
+})
 
 // define the schema for our user model
 var userSchema = mongoose.Schema({
-
-    local            : {
-        email        : String,
-        password     : String,
-    }
-//    acheivements: [acheivementSchema]
+  local            : {
+    email        : String,
+    password     : String
+  },
+  achievements: [achievementSchema]
 });
 
 // methods ======================
@@ -29,4 +30,5 @@ userSchema.methods.validPassword = function(password) {
 };
 
 // create the model for users and expose it to our app
-module.exports = mongoose.model('User', userSchema);
+var User = mongoose.model('User', userSchema)
+module.exports = User
