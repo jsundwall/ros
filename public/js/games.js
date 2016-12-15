@@ -70,8 +70,8 @@ $('.cancel1').click(function(){
 
 // Ping pong game
 $('#demo').click(function(){
-		$(".monkeyhead").animate({top: '525px'}, 2000);
-		$(".monkeyhead").animate({top: '140px'}, 2000);
+		$(".monkeyhead").animate({top: '495px'}, 2000);
+		$(".monkeyhead").animate({top: '80px'}, 2000);
 		$(".single_box")
 			.delay(3800)
 			.queue(function (next) {
@@ -79,11 +79,11 @@ $('#demo').click(function(){
 			next();
 			document.getElementById("p").innerHTML = "Score: 1";
 			});		
-		$(".monkeyhead").animate({top: '600px'}, 2000);
+		$(".monkeyhead").animate({top: '520px'}, 2000);
 		$(".user_block")
 			.delay(4500)
 			.queue(function (next) {
-			$(this).css("margin-right", "18");
+			$(this).css("right", "180");
 			next();
 			});
 		$(".cross").delay(5500).fadeIn(2000);
