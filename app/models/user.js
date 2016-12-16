@@ -5,11 +5,10 @@ var bcrypt   = require('bcrypt-nodejs');
 
 // Define Achievements schema for the Achievements model
 var achievementSchema = mongoose.Schema({
-  name: String,
-  value: Boolean
+  name: String
 })
 
-// define the schema for our user model
+// Define the schema for our user model
 var userSchema = mongoose.Schema({
   local            : {
     email        : String,

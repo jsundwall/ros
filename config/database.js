@@ -1,4 +1,4 @@
 // config/database.js
 module.exports = {
-    'url' : 'mongodb://user:pass@jello.modulusmongo.net:27017/oqeQoz8o'
+    'url' : 'mongodb://user:pass@waffle.modulusmongo.net:27017/A6hiqutu'
 };

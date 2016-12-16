@@ -8,11 +8,10 @@ module.exports = function (app, passport) {
   });
 
   // Process the login form
-  // app.post('login', do all the passport stuff here);
   app.post('/login', passport.authenticate('local-login', {
-		successRedirect : '/afterlogin', // redirect to the secure profile section
-		failureRedirect : '/login', // redirect back to the signup page if there is an error
-		failureFlash : true // allow flash messages
+		successRedirect : '/afterlogin',    // redirect to the secure profile section
+		failureRedirect : '/login',         // redirect back to the signup page if there is an error
+		failureFlash : true                 // allow flash messages
 	}));
 
   // ======================
@@ -21,16 +20,10 @@ module.exports = function (app, passport) {
 
   // process the signup form
   app.post('/register', passport.authenticate('local-signup', {
-    successRedirect : '/login', // redirect to the secure profile section
-    failureRedirect : '/register', // redirect back to the signup page if there is an error
-    failureFlash : true // allow flash messages
+    successRedirect : '/login',         // redirect to the secure profile section
+    failureRedirect : '/register',      // redirect back to the signup page if there is an error
+    failureFlash : true                 // allow flash messages
   }));
-
-
-// -- All routes afte this section requires login. Checked with isLoggedIn middleware
-  app.get('/afterlogin', isLoggedIn, function(req, res){
-  });
-
 
   // =====================
   // Logout ==============
@@ -40,6 +33,13 @@ module.exports = function (app, passport) {
     res.redirect('/');
   });
 };
+
+// -- All routes afte this section requires login. Checked with isLoggedIn middleware
+  //app.get('/afterlogin', isLoggedIn, function(req, res){
+  //});
+
+
+
 
 // route middleware to make sure
 function isLoggedIn(req, res, next) {
