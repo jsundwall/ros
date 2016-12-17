@@ -6,15 +6,15 @@
 	<div id="menu_register">
 
 		<!-- Register stuff -->
-		<form action="/register" method="post">
+		<form ng-submit="register()">
 			<img src="img/signup.png" class="signupimg noclick menu_fade">
-			<input type="text" name="email" placeholder="MAIL" class="menu_fade"></input>
-			<input type="text" name="phone_number" placeholder="PHONE NUMBER" class="menu_fade"></input>
-			<input type="password" name="password" placeholder="PASSWORD" class="menu_fade"></input>
-			
-		
-				<a href="/"><img src="img/cancel.png" class="cancel menu_fade"></a>
-				<button type="submit" class="submit-button ok menu_fade"></button>
+			<input type="text" name="username" placeholder="USERNAME" class="menu_fade" ng-model="registerForm.username" required>
+			<input type="text" name="phone_number" placeholder="PHONE NUMBER" class="menu_fade">
+			<input type="password" name="password" placeholder="PASSWORD" class="menu_fade" ng-model="registerForm.password" required>
+
+
+				<a href="#/"><img src="img/cancel.png" class="cancel menu_fade"></a>
+				<button type="submit" class="submit-button ok menu_fade" ng-disabled="disabled"></button>
 		</form>
 	</div>
 
