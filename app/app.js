@@ -1,17 +1,18 @@
 // dependencies
-var express = require('express');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var expressSession = require('express-session');
-var mongoose = require('mongoose');
-var hash = require('bcrypt-nodejs');
-var path = require('path');
-var passport = require('passport');
-var localStrategy = require('passport-local' ).Strategy;
+var express         = require('express'),
+    logger          = require('morgan'),
+    cookieParser    = require('cookie-parser'),
+    bodyParser      = require('body-parser'),
+    expressSession  = require('express-session'),
+    mongoose        = require('mongoose'),
+    hash            = require('bcrypt-nodejs'),
+    path            = require('path'),
+    passport        = require('passport'),
+    localStrategy   = require('passport-local' ).Strategy,
+    config          = require('./config/cfg');
 
 // mongoose
-mongoose.connect('mongodb://user:pass@waffle.modulusmongo.net:27017/A6hiqutu');
+mongoose.connect(config.db);
 
 // user schema/model
 var User = require('./models/user.js');
