@@ -5,8 +5,8 @@ var passportLocalMongoose = require('passport-local-mongoose');
 var bcrypt                = require('bcrypt-nodejs');
 
 var achievementSchema = new Schema({
-  name: String
-})
+  name          : String
+});
 
 var User = new Schema({
   username      : String,
