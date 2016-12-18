@@ -1,6 +1,7 @@
 var jungleApp = angular.module('jungleApp', ['ngRoute']);
 
-jungleApp.config(function ($routeProvider) {
+jungleApp.config(function ($routeProvider, $locationProvider) {
+  $locationProvider.html5Mode(true);
   $routeProvider
     .when('/', {
       templateUrl: 'views/index.html',

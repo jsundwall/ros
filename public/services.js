@@ -23,7 +23,7 @@ angular.module('jungleApp').factory('AuthService',
     }
 
     function getUserStatus() {
-      return $http.get('/user/status')
+      return $http.get('status')
       // handle success
       .success(function (data) {
         if(data.status){
@@ -44,7 +44,7 @@ angular.module('jungleApp').factory('AuthService',
       var deferred = $q.defer();
 
       // send a post request to the server
-      $http.post('/user/login',
+      $http.post('login',
         {username: username, password: password})
         // handle success
         .success(function (data, status) {
@@ -73,7 +73,7 @@ angular.module('jungleApp').factory('AuthService',
       var deferred = $q.defer();
 
       // send a get request to the server
-      $http.get('/user/logout')
+      $http.get('logout')
         // handle success
         .success(function (data) {
           user = false;
@@ -96,7 +96,7 @@ angular.module('jungleApp').factory('AuthService',
       var deferred = $q.defer();
 
       // send a post request to the server
-      $http.post('/user/register',
+      $http.post('register',
         {username: username, password: password})
         // handle success
         .success(function (data, status) {
