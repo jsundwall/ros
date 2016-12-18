@@ -1,8 +1,8 @@
 // user model
 var mongoose              = require('mongoose');
-var Schema                = mongoose.Schema;
 var passportLocalMongoose = require('passport-local-mongoose');
 var bcrypt                = require('bcrypt-nodejs');
+var Schema                = mongoose.Schema;
 
 var achievementSchema = new Schema({
   name          : String

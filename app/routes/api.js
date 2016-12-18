@@ -1,8 +1,8 @@
-var express = require('express');
-var router = express.Router();
-var passport = require('passport');
-
-var User = require('../models/user.js');
+// app/routes/api.js
+var express   = require('express');
+var passport  = require('passport');
+var User      = require('../models/user.js');
+var router    = express.Router();
 
 
 router.post('/register', function(req, res) {
