@@ -187,8 +187,8 @@ cursor:default !important;
 	width:390px;
 	height:527px;
 	margin-left:5px;
-	margin-top:8px;	
-	
+	margin-top:8px;
+
 }
 .backarrow{
 	margin-left:13px;
@@ -248,9 +248,10 @@ margin-left:-192px;
 margin-top:165px;
 }
 .user_block{
-float:right;
-margin-top:402px;
-margin-right:130px;
+position:absolute;
+margin-top:562px;
+margin-left:-230px;
+position:absolute;
 }
 .cross{
 	width:33px;
@@ -320,7 +321,7 @@ margin-top:110px;
 		height:413px;
 		margin-left:6px;
 		padding-top:127px;
-	}		
+	}
 		.d_butterfly{
 			width:70%;
 			margin-left:15px;
@@ -423,15 +424,15 @@ margin-top:110px;
 	height:711px;
 	background-image:url(../img/flappybackground.png);
 	background-size:contain;
-	
-}	
+
+}
 .spike{
 	margin-left:241px;
 	position:absolute;
 }
 	.spike2{
 		margin-left:522px;
-		position:absolute;	
+		position:absolute;
 	}
 		.spike3{
 			margin-left:836px;
@@ -455,7 +456,7 @@ margin-top:110px;
 	.box_2_spike1{
 		position:absolute;
 		margin-top:383px;
-		margin-left:880px;	
+		margin-left:880px;
 	}
 	#games{z-index:10;
 	position:absolute;}
@@ -498,7 +499,7 @@ margin-top:110px;
     margin-left: -140px;
     left:0;
     cursor: pointer;
-    
+
 }
 
 .scli img {
@@ -580,7 +581,7 @@ margin-top:110px;
 	margin-top:20px;
 	cursor:pointer;
 	border:1px solid green;
-	
+
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9dd53a+0,a1d54f+50,80c217+51,7cbc0a+100;Green+Gloss+%231 */
 background: #9dd53a; /* Old browsers */
 background: -moz-linear-gradient(top,  #9dd53a 0%, #a1d54f 50%, #80c217 51%, #7cbc0a 100%); /* FF3.6-15 */
@@ -613,7 +614,7 @@ color:darkgreen;
 	background-color:#f2f2f2;
 	z-index:1000000;
 }
-#gameinforight{float:right;position:relative;margin-top:-686px;margin-right:38px;}
+#gameinforight{float:right;position:relative;margin-top:-686px;margin-right:38px;display:none;}
 .h2game1, .pgame1, .h2game2, .pgame2, .h2game3, .pgame3, .h2game4, .pgame4{
 	display:none;
 }

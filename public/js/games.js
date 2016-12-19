@@ -12,14 +12,14 @@ $('.register').click(function(){
 		$(".bubble_gone2").delay(3000).fadeIn(300);
 		$(".gone").fadeOut(1000);
 		$(".gone2").delay(999).fadeIn(1000);
-		$(".bubble_gone2").delay(3000).fadeOut(300);	
+		$(".bubble_gone2").delay(3000).fadeOut(300);
 });
 $('.forgotpass').click(function(){
 		$(".bubble_gone").fadeOut(300);
 		$(".bubble_gone3").delay(3000).fadeIn(300);
 		$(".gone").fadeOut(1000);
 		$(".gone3").delay(999).fadeIn(1000);
-		$(".bubble_gone3").delay(3000).fadeOut(300);	
+		$(".bubble_gone3").delay(3000).fadeOut(300);
 });
 $('.ok').click(function(){
 		$(".bubble_gone2").fadeOut(300);
@@ -59,7 +59,7 @@ $('.ok1').click(function(){
 			$(".dealwithit").animate({ marginTop: '586px' }, 3000);
 			next();
 			});
-		
+
 });
 $('.cancel1').click(function(){
 		$(".bubble_gone3").fadeOut(300);
@@ -70,24 +70,25 @@ $('.cancel1').click(function(){
 
 // Ping pong game
 $('#demo').click(function(){
-		$(".monkeyhead").animate({top: '495px'}, 2000);
-		$(".monkeyhead").animate({top: '80px'}, 2000);
+		$(".monkeyhead").animate({top: '455px'}, 2000);
+		$(".monkeyhead").animate({top: '50px'}, 2000);
 		$(".single_box")
 			.delay(3800)
 			.queue(function (next) {
 			$(this).css("opacity", "0");
 			next();
 			document.getElementById("p").innerHTML = "Score: 1";
-			});		
+			});
 		$(".monkeyhead").animate({top: '520px'}, 2000);
 		$(".user_block")
 			.delay(4500)
 			.queue(function (next) {
-			$(this).css("right", "180");
+
 			next();
 			});
 		$(".cross").delay(5500).fadeIn(2000);
-		
+		$(".user_block").animate({left: '1000px'}, 800);
+
 });
 
 // Waterlog game
@@ -99,7 +100,7 @@ $('#demo1').click(function(){
 		$(".waterlog5").animate({top: '105px'}, 3000);
 		$(".yellowfish").delay(2000).animate({left: '900px'}, 1000);
 		$(".yellowfish").delay(1500).animate({left: '770px'}, 1000);
-		$(".yellowfish").delay(1500).animate({top: '-400px'}, 1000);	
+		$(".yellowfish").delay(1500).animate({top: '-400px'}, 1000);
 });
 
 // Dress game
