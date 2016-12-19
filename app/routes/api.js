@@ -1,10 +1,14 @@
 // app/routes/api.js
+
+// Load dependencies
 var express   = require('express');
 var passport  = require('passport');
 var User      = require('../models/user.js');
 var router    = express.Router();
 
 
+
+// Handle '/register' route
 router.post('/register', function(req, res) {
   User.register(new User({ username: req.body.username }),
     req.body.password, function(err, account) {
@@ -21,6 +25,7 @@ router.post('/register', function(req, res) {
   });
 });
 
+// Handle '/login' route
 router.post('/login', function(req, res, next) {
   passport.authenticate('local', function(err, user, info) {
     if (err) {
@@ -44,6 +49,7 @@ router.post('/login', function(req, res, next) {
   })(req, res, next);
 });
 
+// Handle '/logout' route
 router.get('/logout', function(req, res) {
   req.logout();
   res.status(200).json({
@@ -51,6 +57,7 @@ router.get('/logout', function(req, res) {
   });
 });
 
+// Handle '/status' route
 router.get('/status', function(req, res) {
   if (!req.isAuthenticated()) {
     return res.status(200).json({
@@ -62,5 +69,5 @@ router.get('/status', function(req, res) {
   });
 });
 
-
+// Export router variable
 module.exports = router;
