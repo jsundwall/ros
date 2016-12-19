@@ -1,5 +1,8 @@
+//Call the angular.module.
 var jungleApp = angular.module('jungleApp', ['ngRoute']);
 
+// All routes for the application
+// Restricted with {restricted: true/false} to only allow logged in users.
 jungleApp.config(function ($routeProvider, $locationProvider) {
   $locationProvider.html5Mode(true);
   $routeProvider
@@ -29,11 +32,13 @@ jungleApp.config(function ($routeProvider, $locationProvider) {
       templateUrl: 'views/map.html',
       access: {restricted: true}
     })
+	// Otherwise redirects visitors who reaches an invalid route or are not logged in.
     .otherwise({
       redirectTo: '/'
     });
 });
 
+//Logic to check if user is logged in or not.
 jungleApp.run(function ($rootScope, $location, $route, AuthService) {
   $rootScope.$on('$routeChangeStart',
     function (event, next, current) {
