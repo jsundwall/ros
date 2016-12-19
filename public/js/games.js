@@ -70,8 +70,8 @@ $('.cancel1').click(function(){
 
 // Ping pong game
 $('#demo').click(function(){
-		$(".monkeyhead").animate({top: '455px'}, 2000);
-		$(".monkeyhead").animate({top: '50px'}, 2000);
+		$(".monkeyhead").animate({top: '438px'}, 2000);
+		$(".monkeyhead").animate({top: '38px'}, 2000);
 		$(".single_box")
 			.delay(3800)
 			.queue(function (next) {
@@ -79,7 +79,7 @@ $('#demo').click(function(){
 			next();
 			document.getElementById("p").innerHTML = "Score: 1";
 			});
-		$(".monkeyhead").animate({top: '520px'}, 2000);
+		$(".monkeyhead").animate({top: '504px'}, 2000);
 		$(".user_block")
 			.delay(4500)
 			.queue(function (next) {
@@ -87,7 +87,7 @@ $('#demo').click(function(){
 			next();
 			});
 		$(".cross").delay(5500).fadeIn(2000);
-		$(".user_block").animate({left: '1000px'}, 800);
+		$(".user_block").animate({left: '478px'}, 800);
 
 });
 
@@ -96,10 +96,10 @@ $('#demo1').click(function(){
 		$(".waterlog1").animate({top: '625px'}, 10000);
 		$(".waterlog2").animate({top: '525px'}, 9000);
 		$(".waterlog3").animate({top: '525px'}, 9000);
-		$(".waterlog4").animate({top: '325px'}, 6100);
+		$(".waterlog4").animate({top: '313px'}, 6100);
 		$(".waterlog5").animate({top: '105px'}, 3000);
-		$(".yellowfish").delay(2000).animate({left: '900px'}, 1000);
-		$(".yellowfish").delay(1500).animate({left: '770px'}, 1000);
+		$(".yellowfish").delay(2000).animate({left: '150px'}, 1000);
+		$(".yellowfish").delay(1500).animate({left: '0px'}, 1000);
 		$(".yellowfish").delay(1500).animate({top: '-400px'}, 1000);
 });
 
@@ -116,7 +116,13 @@ $('#done_button').click(function(){
 
 // Flappy monkey game
 $('#demo2').click(function(){
-		$(".spike, .spike2, .spike3, .box_spike, .box_2_spike, .box_spike1, .box_2_spike1").animate({left: '60px'}, 18000);
+		$(".box_spike").animate({right: '806px'}, 18000);
+		$(".spike").animate({right: '766px'}, 18000);
+		$(".box_2_spike").animate({right: '612px'}, 18000);
+		$(".spike2").animate({right: '542px'}, 18000);
+		$(".box_spike1").animate({right: '289px'}, 18000);
+		$(".spike3").animate({right: '204px'}, 18000);
+		$(".box_2_spike1").animate({right: '97px'}, 18000);
 		$(".fugl").delay(2000).animate({top:'210px'}, 3000);
 		$(".fugl").animate({top:'160px'}, 500);
 		$(".fugl").animate({top:'170px'}, 500);

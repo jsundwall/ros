@@ -7,6 +7,10 @@ jungleApp.config(function ($routeProvider, $locationProvider) {
   $locationProvider.html5Mode(true);
   $routeProvider
     .when('/', {
+      templateUrl: 'views/intro.html',
+      access: {restricted: false}
+    })
+    .when('/index', {
       templateUrl: 'views/index.html',
       access: {restricted: false}
     })

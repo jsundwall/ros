@@ -1,4 +1,5 @@
 <!-- Body html -->
+<div id="iphone_holder">
 <div class="game-container1">
 	<div class="rostorvlogo">
 		<img src="img/rostorvlogo.png" alt="Ro's Torv Logo">
@@ -12,12 +13,13 @@
 			<input type="text" name="username" placeholder="NICKNAME" class="menu_fade"ng-model="loginForm.username" required>
 			<input type="password" name="password" placeholder="PASSWORD" class="menu_fade m2" ng-model="loginForm.password" required>
 
-		<a href="/"><img src="img/cancel.png" class="cancel2 menu_fade"></a>
+		<a href="/index"><img src="img/cancel.png" class="cancel2 menu_fade"></a>
 		<button type="submit" class="submit-button menu_fade ok2" ng-disabled="disabled"></button>
 		</form>
 	</div>
 	<img class="bubble bubble_gone" src="img/logintoplay.png">
 	<img class="monkey" src="img/monkey.png">
 	</div>
+</div>
 <!-- This script must be kept in bottom -->
 <script src="js/login.js"></script>

@@ -1,0 +1,16 @@
+<a href="/index">
+<div id="introduction">
+<img class="monkeyappear" src="/img/monkeyappear.png">
+<img class="monkeyappear2" src="/img/monkeyappear.png">
+<img class="timetoplay" src="/img/timetoplay.png">
+</div>
+</a>
+
+<script>
+$( document ).ready(function() {
+  $(".monkeyappear").delay(2000).animate({top: '78px'}, 1500);
+  $(".monkeyappear").delay(1000).animate({top: '0px'}, 2000);
+  $(".monkeyappear2").delay(8000).animate({top: '168px'}, 2000);
+  $(".timetoplay").delay(10000).fadeIn(500);
+});
+</script>
