@@ -44,12 +44,20 @@ app.use(require('express-session')({
 app.use(passport.initialize());
 app.use(passport.session());
 
-// configure passport
+// =============================================================================
+// Configure passport
+// Use a local strategy (own database)
+// Make sure that user can be serialized and deserialized
+// =============================================================================
 passport.use(new localStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-// routes
+// =============================================================================
+// Configure routes
+// Catch '/' and send to index
+// Catchall and send to index
+// =============================================================================
 app.use(routes);
 
 app.get('/', function(req, res) {
@@ -59,7 +67,12 @@ app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname, '../public', 'index.html'));
 });
 
-// error handlers
+
+// =============================================================================
+// Handle Errors
+// Configure 404
+// Configure 500
+// =============================================================================
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
@@ -74,4 +87,5 @@ app.use(function(err, req, res) {
   }));
 });
 
+// Export the variable App to use for server.js
 module.exports = app;
