@@ -32,6 +32,10 @@ jungleApp.config(function ($routeProvider, $locationProvider) {
       templateUrl: 'views/map.html',
       access: {restricted: true}
     })
+    .when('/flappy', {
+      templateUrl: 'views/flappy.html',
+      access: {restricted: false}
+    })
 	// Otherwise redirects visitors who reaches an invalid route or are not logged in.
     .otherwise({
       redirectTo: '/'
