@@ -1,6 +1,9 @@
 // Game content
 var length = 400;
 var height = 711;
+// var scorespeed = this.score + 10
+var lvlspeed = 250 //* scorespeed
+
 
 
 // Create the main state - contains the Game
@@ -8,8 +11,8 @@ var mainState = {
   // Preloader
   preload: function() {
     // All that needs to be preloaded
-    game.load.image('monkey', 'assets/abefugl.png');
-    game.load.image('pipe', 'assets/pipe.png');
+    game.load.image('monkey', '../img/flappy.png');
+    game.load.image('pipe', '../img/pipe.png');
   },
 
   // Called after preloading
@@ -24,7 +27,7 @@ var mainState = {
     game.physics.startSystem(Phaser.Physics.ARCADE);
 
     // Display the bird at the given x,y position
-    this.monkey = game.add.sprite(100, 245, 'monkey');
+    this.monkey = game.add.sprite(50, 245, 'monkey');
 
     // Lets add some physics
     // Physics yo, it is needed for movement, gravity and so on
@@ -38,7 +41,7 @@ var mainState = {
     var spaceKey = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
     spaceKey.onDown.add(this.jump, this);
 
-    this.timer = game.time.events.loop(1800, this.addRowOfPipes, this);
+    this.timer = game.time.events.loop(1200, this.addRowOfPipes, this);
 
     this.score = 0;
     this.labelScore = game.add.text(20, 20, "0",
@@ -54,12 +57,23 @@ var mainState = {
     };
     game.physics.arcade.overlap(
     this.monkey, this.pipes, this.restartGame, null, this);
+
+    if (this.monkey.angle < 20)
+      this.monkey.angle += 1;
   },
 
   // Make sure monkey can jumpie jumpie
   jump: function() {
     // Add a vertical velocity to the monkey
     this.monkey.body.velocity.y = -450;
+
+    //Lets add some animation
+    var animation = game.add.tween(this.monkey);
+
+    // Change the angle of the monkey
+    animation.to({angle: -20}, 100);
+
+    animation.start();
   },
 
   // Create the restartGame function
@@ -80,7 +94,7 @@ var mainState = {
     game.physics.arcade.enable(pipe);
 
     // Add velocity to the pipe to make it move left
-    pipe.body.velocity.x = -150;
+    pipe.body.velocity.x = -lvlspeed;
 
     // Automatically kill the pipe when it's no longer visible
     pipe.checkWorldBounds = true;
@@ -88,7 +102,7 @@ var mainState = {
   },
 
   addRowOfPipes: function() {
-    // Randomly pick a number between 1 and 9
+    // Randomly pick a number between 1 and 5
     // This will be the hole position
     var hole = Math.floor(Math.random() * 5 + 1);
 
@@ -96,7 +110,7 @@ var mainState = {
     // With one big hole at position 'hole' and 'hole + 1'
     for (var i = 0; i < 10; i++)
       if (i != hole && i != hole + 1 && i != hole + 2 && i != hole + 3)
-        this.addOnePipe(400, i * 71.1 + 10);
+        this.addOnePipe(length, i * 71.1 + 10);
 
     this.score += 1;
     this.labelScore.text = this.score;
@@ -104,7 +118,7 @@ var mainState = {
 };
 
 // Initialize phaser - Lets get started
-var game = new Phaser.Game(length, height);
+var game = new Phaser.Game(length, height, Phaser.AUTO, "canvas");
 
 // Add the var 'mainState' to our game as a state - call it main
 game.state.add('main', mainState);
