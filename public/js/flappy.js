@@ -557,7 +557,7 @@ Preload.prototype = {
     this.load.image('bird', 'assets/abefugl.png');
     this.load.spritesheet('pipe', 'assets/pipes.png', 54,520,2);
     this.load.image('startButton', 'assets/start-button.png');
-    this.load.image('goBack', 'assets/goBack.png');
+    this.load.image('goBack', 'assets/goback.png');
     this.load.image('replayButton', 'assets/replay.png');
 
     this.load.image('instructions', 'assets/instructions.png');
